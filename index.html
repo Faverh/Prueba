@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        function explicacion() {
+            document.write("Hola");
+            //Variables
+            let a = 1; //Local
+            var b = "Colombia"; //Global
+            let c = a + b;
+            let salir = true;
+            let miVariable; //undefined
+            miVariable = "Instrucciones para traer datos de BD";
+            if (miVariable != undefined || miVariable != null) {
+                //Ejecute este código
+            }
+            //Constantes
+            const CABECERA = "CURSO WEB";
+            document.write(c);
+            document.write(miVariable);
+            alert(CABECERA);
+            let r = prompt("Ingrese su Edad");
+            if (r >= 18) {
+                document.write("Puede ingresar");
+            }
+            let conf = confirm("Realmente desea borrar el registro!");
+            if (conf) {
+                alert("Registro Eliminado :)")
+            }
+            //Ciclo repetivo for
+            for (let i = 0; i < 10; i++) {
+                // Concatenar con template string
+                document.write(`${i} <br>`);
+            }
+            let nombre, apellido;
+            nombre = prompt("Nombre");
+            apellido = prompt("Apellido");
+            if (nombre == "juan" && apellido == "perez") {
+                alert("Puede pasar");
+            } else {
+                alert("No puede pasar");
+            }
+        }
+        function sumar() {
+            let a, b;
+            a = prompt("Digite primer valor");
+            b = prompt("Digite segundo valor");
+            document.write(parseInt(a) + parseInt(b));
+        }
+        function login() {
+            let usuario = document.getElementById("txtUsuario");
+            let password = document.getElementById("txtPassword");
+            if (usuario.value == "admin"
+                && password.value == "admin") {
+                    alert("Bienvenido!!!")
+            } else{
+                alert("Usuario o Password incorrecto ")
+            }
+        }
+    </script>
+    <style>
+        .contenedor {
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <form action="">
+            <div>
+                <label for="">Usuario</label>
+                <input id="txtUsuario" type="text">
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input id="txtPassword" type="password" title="Contraseña del usuario">
+            </div>
+            <input type="button" value="Entrar" onclick="login()">
+        </form>
+    </div>
+</body>
+</html>
